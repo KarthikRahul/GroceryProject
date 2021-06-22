@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:grocery_market/Screens/adminscreen/adminlogin_screen.dart';
+import 'package:grocery_market/Screens/adminscreen/adminloginscreen/adminlogin_screen.dart';
 
 void AdminEntry(context) {
   Navigator.push(

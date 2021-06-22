@@ -1,14 +1,9 @@
-import 'dart:ui';
-
 import 'package:flutter/material.dart';
-import 'package:grocery_market/Screens/loginscreen/functions/admin_func.dart';
 
-class LoginScreen extends StatelessWidget {
-  const LoginScreen({Key? key}) : super(key: key);
+class Adminlogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    double height = MediaQuery.of(context).size.height;
-    double width = MediaQuery.of(context).size.width;
+    // TODO: implement build
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -31,9 +26,9 @@ class LoginScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 15.0, right: 300.0, top: 100.0, bottom: 0),
+                  left: 15.0, right: 200.0, top: 100.0, bottom: 0),
               child: Text(
-                "Login",
+                " Admin Login",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 23,
@@ -114,7 +109,7 @@ class LoginScreen extends StatelessWidget {
                     //AFTER PRESSING CREATE ACCOUNT
                   },
                   child: Text(
-                    'New User? Create Account',
+                    'New User? Create Admin Account',
                     style: TextStyle(color: Colors.black, fontSize: 15),
                   ),
                 ),
@@ -122,26 +117,6 @@ class LoginScreen extends StatelessWidget {
             ),
             SizedBox(
               height: 100,
-            ),
-            Align(
-              alignment: Alignment.center,
-              child: Container(
-                height: 50,
-                width: 250,
-                decoration: BoxDecoration(
-                    color: Colors.green,
-                    borderRadius: BorderRadius.circular(20)),
-                child: FlatButton(
-                  onPressed: () {
-                    //AFTER PRESSING ADMIN BUTTON GOES HERE
-                    AdminEntry(context);
-                  },
-                  child: Text(
-                    'Admin',
-                    style: TextStyle(color: Colors.white, fontSize: 25),
-                  ),
-                ),
-              ),
             ),
           ],
         ),
