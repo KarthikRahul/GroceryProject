@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 
-import 'login_screen.dart';
-void main(){
+import 'Screens/loginscreen/login_screen.dart';
+
+void main() {
   runApp(Myapp());
 }
+
 class Myapp extends StatelessWidget {
   const Myapp({Key? key}) : super(key: key);
 
@@ -14,4 +16,3 @@ class Myapp extends StatelessWidget {
     );
   }
 }
-
