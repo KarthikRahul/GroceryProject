@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'functions/homescreenentry_func.dart';
+
 class Adminlogin extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
@@ -88,6 +90,7 @@ class Adminlogin extends StatelessWidget {
                 child: FlatButton(
                   onPressed: () {
                     //AFTER PRESSING LOGIN SCREEN GOES HERE
+                    HomeScreenEntry(context);
                   },
                   child: Text(
                     'Login',
