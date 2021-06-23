@@ -8,7 +8,63 @@ class AdminHomescreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(AppName)),
-      body: Center(child: Text('My Page!')),
+      body: Column(
+        children: [
+          Align(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 80.0, bottom: 0),
+              child: Text(
+                "HOME",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 23,
+                ),
+              ),
+            ),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 150, bottom: 0),
+              child: FlatButton(
+                  onPressed: () {
+                    //TODO ADD TO CUSTOMERS CART SCREEN GOES HERE
+                  },
+                  child: RichText(
+                      text: TextSpan(children: [
+                    WidgetSpan(
+                        child: Icon(
+                      Icons.add,
+                      size: 20,
+                    )),
+                    TextSpan(
+                        text: "ADD TO CUSTOMERS CART",
+                        style: TextStyle(color: Colors.blue, fontSize: 20)),
+                  ]))),
+            ),
+          ),
+          Align(
+            alignment: Alignment.center,
+            child: Padding(
+              padding: const EdgeInsets.only(
+                  left: 15.0, right: 15.0, top: 30, bottom: 0),
+              child: FlatButton(
+                  onPressed: () {
+                    //TODO  CUSTOMERS ORDER SCREEN GOES HERE
+                  },
+                  child: RichText(
+                      text: TextSpan(children: [
+                    TextSpan(
+                        text: " CUSTOMERS ORDER",
+                        style: TextStyle(color: Colors.blue, fontSize: 20)),
+                  ]))),
+            ),
+          ),
+        ],
+      ),
       drawer: Drawer(
         // Add a ListView to the drawer. This ensures the user can scroll
         // through the options in the drawer if there isn't enough vertical
@@ -21,12 +77,13 @@ class AdminHomescreen extends StatelessWidget {
               decoration: BoxDecoration(
                 color: Colors.blue,
               ),
-              child: Text('Drawer Header'),
+              child: CircleAvatar(),
+              //child: Text('Drawer Header'),
             ),
             ListTile(
               /*SHOP PROFILE NAME*/
               title: Text(
-                'KANNAN STORES',
+                'RELIANCE MARKET',
                 style: TextStyle(
                     color: Colors.black,
                     fontSize: 25,
@@ -36,7 +93,7 @@ class AdminHomescreen extends StatelessWidget {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+                //   Navigator.pop(context);
               },
             ),
             ListTile(
@@ -45,7 +102,7 @@ class AdminHomescreen extends StatelessWidget {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+                //Navigator.pop(context);
               },
             ),
             ListTile(
@@ -54,7 +111,7 @@ class AdminHomescreen extends StatelessWidget {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+                // Navigator.pop(context);
               },
             ),
             ListTile(
@@ -63,7 +120,7 @@ class AdminHomescreen extends StatelessWidget {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+                // Navigator.pop(context);
               },
             ),
             ListTile(
@@ -72,7 +129,16 @@ class AdminHomescreen extends StatelessWidget {
                 // Update the state of the app
                 // ...
                 // Then close the drawer
-                Navigator.pop(context);
+                //Navigator.pop(context);
+              },
+            ),
+            ListTile(
+              title: Text('LOGOUT'),
+              onTap: () {
+                // Update the state of the app
+                // ...
+                // Then close the drawer
+                // Navigator.pop(context);
               },
             ),
           ],
