@@ -1,10 +1,13 @@
+import 'dart:ui';
 import 'package:flutter/material.dart';
-import 'package:grocery_market/Screens/adminscreen/functions/navigateadmin_func.dart';
+import 'package:grocery_market/Screens/customerscreen/functions/navigatecustomer_func.dart';
 
-class Adminlogin extends StatelessWidget {
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    // TODO: implement build
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: Colors.white,
       body: SingleChildScrollView(
@@ -27,9 +30,9 @@ class Adminlogin extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 15.0, right: 200.0, top: 100.0, bottom: 0),
+                  left: 15.0, right: 300.0, top: 100.0, bottom: 0),
               child: Text(
-                " Admin Login",
+                "Login",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 23,
@@ -89,7 +92,6 @@ class Adminlogin extends StatelessWidget {
                 child: FlatButton(
                   onPressed: () {
                     //AFTER PRESSING LOGIN SCREEN GOES HERE
-                    HomeScreenEntry(context);
                   },
                   child: Text(
                     'Login',
@@ -109,10 +111,10 @@ class Adminlogin extends StatelessWidget {
                 child: FlatButton(
                   onPressed: () {
                     //AFTER PRESSING CREATE ACCOUNT
-                    AdminSignUpEntry(context);
+                    SignupEntry(context);
                   },
                   child: Text(
-                    'New User? Create Admin Account',
+                    'New User? Create Account',
                     style: TextStyle(color: Colors.black, fontSize: 15),
                   ),
                 ),
@@ -120,6 +122,26 @@ class Adminlogin extends StatelessWidget {
             ),
             SizedBox(
               height: 100,
+            ),
+            Align(
+              alignment: Alignment.center,
+              child: Container(
+                height: 50,
+                width: 250,
+                decoration: BoxDecoration(
+                    color: Colors.green,
+                    borderRadius: BorderRadius.circular(20)),
+                child: FlatButton(
+                  onPressed: () {
+                    //AFTER PRESSING ADMIN BUTTON GOES HERE
+                    AdminEntry(context);
+                  },
+                  child: Text(
+                    'Admin',
+                    style: TextStyle(color: Colors.white, fontSize: 25),
+                  ),
+                ),
+              ),
             ),
           ],
         ),
