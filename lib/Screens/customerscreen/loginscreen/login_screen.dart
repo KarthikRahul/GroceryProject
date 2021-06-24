@@ -92,6 +92,7 @@ class LoginScreen extends StatelessWidget {
                 child: FlatButton(
                   onPressed: () {
                     //AFTER PRESSING LOGIN SCREEN GOES HERE
+                    CustomerHomescreen(context);
                   },
                   child: Text(
                     'Login',
