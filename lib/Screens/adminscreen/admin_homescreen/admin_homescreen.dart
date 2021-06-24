@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import 'package:grocery_market/Screens/adminscreen/functions/navigateadmin_func.dart';
 import 'package:grocery_market/constants/constants.dart';
 
 class AdminHomescreen extends StatelessWidget {
@@ -104,6 +104,7 @@ class AdminHomescreen extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 //Navigator.pop(context);
+                MarkMyShopEntry(context);
               },
             ),
             ListTile(
@@ -113,6 +114,7 @@ class AdminHomescreen extends StatelessWidget {
                 // ...
                 // Then close the drawer
                 // Navigator.pop(context);
+                FavoriteCustomersEntry(context);
               },
             ),
             ListTile(
