@@ -30,9 +30,9 @@ class LoginScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 15.0, right: 300.0, top: 100.0, bottom: 0),
+                  left: 15.0, right: 200.0, top: 80.0, bottom: 0),
               child: Text(
-                "Login",
+                " Login ",
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 23,
@@ -121,7 +121,7 @@ class LoginScreen extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 100,
+              height: 50,
             ),
             Align(
               alignment: Alignment.center,

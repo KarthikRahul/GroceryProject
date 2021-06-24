@@ -31,7 +31,7 @@ class SignupScreen extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                  left: 15.0, right: 300.0, top: 80.0, bottom: 0),
+                  left: 15.0, right: 200.0, top: 80.0, bottom: 0),
               child: Text(
                 "SignUp",
                 style: TextStyle(
